@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vie Prints & Crafts</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #fce4ec; /* A light pink background */
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        main {
+            flex-grow: 1;
+        }
+    </style>
+</head>
+<body class="text-gray-800">
+
+    <header class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center rounded-b-xl">
+            <h1 class="text-3xl font-bold tracking-tight text-pink-800">Vie Prints & Crafts</h1>
+            <button id="cart-button" class="relative p-2 rounded-full bg-rose-600 text-white hover:bg-rose-700 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-rose-500">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13a2 2 0 100 4h10a2 2 0 100-4M8 17a2 2 0 11-4 0m4 0a2 2 0 11-4 0" />
+                </svg>
+                <span id="cart-count" class="absolute top-0 right-0 inline-flex items-center justify-center px-2 py-1 text-xs font-bold leading-none text-red-100 transform translate-x-1/2 -translate-y-1/2 bg-rose-600 rounded-full">0</span>
+            </button>
+        </div>
+    </header>
+
+    <div class="flex flex-1">
+        <aside class="w-64 bg-rose-100 shadow-lg p-6 hidden md:block">
+            <nav class="space-y-4">
+                <a href="#handcrafted" class="block p-2 rounded-lg text-rose-800 font-semibold hover:bg-rose-200 transition-colors">Handcrafted Collection</a>
+                <a href="#prints-photocopy" class="block p-2 rounded-lg text-rose-800 font-semibold hover:bg-rose-200 transition-colors">B&W Prints/Photocopy</a>
+                <a href="#colored-prints" class="block p-2 rounded-lg text-rose-800 font-semibold hover:bg-rose-200 transition-colors">Colored Prints</a>
+            </nav>
+        </aside>
+
+        <main class="container mx-auto px-4 py-8">
+            <h2 id="handcrafted" class="text-4xl font-extrabold text-center mb-2 text-pink-800">Our Handcrafted Collection</h2>
+            <p class="text-center text-lg italic text-gray-600 mb-10">We turn ordinary into adorable, one print and craft at a time!</p>
+            
+            <div id="product-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="product-card bg-white rounded-2xl shadow-xl overflow-hidden transform hover:scale-105 transition-transform duration-300 cursor-pointer">
+    <img src="SHERVIE MAPA/541300825_782501167488883_7091893299242578414_n.jpg" alt="Polaroid print" class="w-full h-48 object-cover">
+    <div class="p-6">
+        <h3 class="text-2xl font-semibold text-pink-800">Polaroid</h3>
+        <p class="text-gray-600 mt-2">A personalized polaroid print, includes 10 pictures to capture your favorite moments.</p>
+        <div class="mt-4 flex flex-col items-stretch space-y-4">
+            <span class="text-xl font-bold text-gray-900 text-center">₱40.00</span>
+            
+            <label class="upload-btn w-full text-center py-2 rounded-full font-semibold shadow-lg transition-colors duration-300 bg-rose-200 text-rose-800 hover:bg-rose-300 cursor-pointer">
+                Upload Photos
+                <input type="file" multiple accept="image/*" class="hidden" data-id="7">
+            </label>
+            
+            <button class="add-to-cart-btn w-full bg-rose-600 text-white py-2 rounded-full font-semibold shadow-lg hover:bg-rose-700 transition-colors duration-300" data-id="7" data-name="Polaroid" data-price="40.00" data-image-src="SHERVIE MAPA/541300825_782501167488883_7091893299242578414_n.jpg">Add to Cart</button>
+        </div>
+    </div>
+</div>
+                
+                <div class="product-card bg-white rounded-2xl shadow-xl overflow-hidden transform hover:scale-105 transition-transform duration-300 cursor-pointer">
+                    <img src="SHERVIE MAPA/541198305_796025499587191_1764268440806819705_n (1).jpg" alt="Fuzzy wire keychain" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-semibold text-pink-800">Fuzzy Wire Keychains</h3>
+                        <p class="text-gray-600 mt-2">Adorable handmade fuzzy wire keychains in various shapes.</p>
+                        <div class="mt-4 flex justify-between items-center">
+                            <span class="text-xl font-bold text-gray-900">₱25.00</span>
+                            <button class="add-to-cart-btn bg-rose-600 text-white px-5 py-2 rounded-full font-semibold shadow-lg hover:bg-rose-700 transition-colors duration-300" data-id="8" data-name="Fuzzy Wire Keychains" data-price="25.00" data-image-src="SHERVIE MAPA/541198305_796025499587191_1764268440806819705_n (1).jpg">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="product-card bg-white rounded-2xl shadow-xl overflow-hidden transform hover:scale-105 transition-transform duration-300 cursor-pointer">
+                    <img src="SHERVIE MAPA/541273012_1275715900680144_8135324219966649735_n.jpg" alt="Small fuzzy wire bouquet" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-semibold text-pink-800">Fuzzy Wire Bouquet (Small)</h3>
+                        <p class="text-gray-600 mt-2">A small, handmade bouquet of fuzzy wire flowers, perfect for a little gift.</p>
+                        <div class="mt-4 flex justify-between items-center">
+                            <span class="text-xl font-bold text-gray-900">₱179.00</span>
+                            <button class="add-to-cart-btn bg-rose-600 text-white px-5 py-2 rounded-full font-semibold shadow-lg hover:bg-rose-700 transition-colors duration-300" data-id="9" data-name="Fuzzy Wire Bouquet (Small)" data-price="179.00" data-image-src="SHERVIE MAPA/541273012_1275715900680144_8135324219966649735_n.jpg">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="product-card bg-white rounded-2xl shadow-xl overflow-hidden transform hover:scale-105 transition-transform duration-300 cursor-pointer">
+                    <img src="SHERVIE MAPA/541578298_1274087583928260_1374115521610990191_n.jpg" alt="Mini bouquet in a cardboard paper" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-semibold text-pink-800">Mini Bouquet in a Cardboard Paper</h3>
+                        <p class="text-gray-600 mt-2">A small, delicate bouquet beautifully presented in cardboard paper.</p>
+                        <div class="mt-4 flex justify-between items-center">
+                            <span class="text-xl font-bold text-gray-900">₱65.00</span>
+                            <button class="add-to-cart-btn bg-rose-600 text-white px-5 py-2 rounded-full font-semibold shadow-lg hover:bg-rose-700 transition-colors duration-300" data-id="10" data-name="Mini Bouquet in a Cardboard Paper" data-price="65.00" data-image-src="SHERVIE MAPA/541578298_1274087583928260_1374115521610990191_n.jpg">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="prints-photocopy" class="mt-16">
+                <h2 class="text-4xl font-extrabold text-center mb-8 text-pink-800">Prints/Photocopy Services</h2>
+                <div id="xerox-product-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-8">
+                    <div class="product-card bg-white rounded-2xl shadow-xl overflow-hidden transform hover:scale-105 transition-transform duration-300 cursor-pointer">
+    <img src="https://placehold.co/600x400/ffc0cb/ffffff?text=Long+and+A4" alt="Long and A4 paper" class="w-full h-48 object-cover">
+    <div class="p-6">
+        <h3 class="text-2xl font-semibold text-pink-800">Black & White (Long & A4)</h3>
+        <p class="text-gray-600 mt-2">High-quality black and white photocopy services for long and A4-sized documents.</p>
+        <div class="mt-4 flex flex-col items-stretch space-y-4">
+            <span class="text-xl font-bold text-gray-900 text-center">₱2.50</span>
+            
+            <label class="upload-btn w-full text-center py-2 rounded-full font-semibold shadow-lg transition-colors duration-300 bg-rose-200 text-rose-800 hover:bg-rose-300 cursor-pointer">
+                Upload Document
+                <input type="file" multiple accept=".pdf, .doc, .docx" class="hidden" data-id="11">
+            </label>
+            
+            <button class="add-to-cart-btn w-full bg-rose-600 text-white py-2 rounded-full font-semibold shadow-lg hover:bg-rose-700 transition-colors duration-300" data-id="11" data-name="B&W Copy (Long/A4)" data-price="2.50" data-image-src="https://placehold.co/600x400/ffc0cb/ffffff?text=Long+and+A4">Add to Cart</button>
+        </div>
+    </div>
+</div>
+                    
+                    <div class="product-card bg-white rounded-2xl shadow-xl overflow-hidden transform hover:scale-105 transition-transform duration-300 cursor-pointer">
+    <img src="https://placehold.co/600x400/ffc0cb/ffffff?text=Short" alt="Short paper" class="w-full h-48 object-cover">
+    <div class="p-6">
+        <h3 class="text-2xl font-semibold text-pink-800">Black & White (Short)</h3>
+        <p class="text-gray-600 mt-2">High-quality black and white photocopy services for short-sized documents.</p>
+        <div class="mt-4 flex flex-col items-stretch space-y-4">
+            <span class="text-xl font-bold text-gray-900 text-center">₱2.00</span>
+            
+            <label class="upload-btn w-full text-center py-2 rounded-full font-semibold shadow-lg transition-colors duration-300 bg-rose-200 text-rose-800 hover:bg-rose-300 cursor-pointer">
+                Upload Document
+                <input type="file" multiple accept=".pdf, .doc, .docx" class="hidden" data-id="12">
+            </label>
+            
+            <button class="add-to-cart-btn w-full bg-rose-600 text-white py-2 rounded-full font-semibold shadow-lg hover:bg-rose-700 transition-colors duration-300" data-id="12" data-name="B&W Copy (Short)" data-price="2.00" data-image-src="https://placehold.co/600x400/ffc0cb/ffffff?text=Short">Add to Cart</button>
+        </div>
+    </div>
+</div>
+
+            <div id="colored-prints" class="mt-16">
+                <h2 class="text-4xl font-extrabold text-center mb-8 text-pink-800">Colored Prints/Photocopy Services</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-8">
+                    <div class="product-card bg-white rounded-2xl shadow-xl overflow-hidden transform hover:scale-105 transition-transform duration-300 cursor-pointer">
+    <img src="https://placehold.co/600x400/ff99aa/ffffff?text=Minimal+Color+A4" alt="Long and A4 minimal colored paper" class="w-full h-48 object-cover">
+    <div class="p-6">
+        <h3 class="text-2xl font-semibold text-pink-800">Minimal Color (Long & A4)</h3>
+        <p class="text-gray-600 mt-2">Colored prints for long and A4 documents with minimal color coverage (less than 30%).</p>
+        <div class="mt-4 flex flex-col items-stretch space-y-4">
+            <span class="text-xl font-bold text-gray-900 text-center">₱8.00</span>
+            
+            <label class="upload-btn w-full text-center py-2 rounded-full font-semibold shadow-lg transition-colors duration-300 bg-rose-200 text-rose-800 hover:bg-rose-300 cursor-pointer">
+                Upload Document
+                <input type="file" multiple accept=".pdf, .doc, .docx" class="hidden" data-id="15">
+            </label>
+            
+            <button class="add-to-cart-btn w-full bg-rose-600 text-white py-2 rounded-full font-semibold shadow-lg hover:bg-rose-700 transition-colors duration-300" data-id="15" data-name="Minimal Color (Long/A4)" data-price="8.00" data-image-src="https://placehold.co/600x400/ff99aa/ffffff?text=Minimal+Color+A4">Add to Cart</button>
+        </div>
+    </div>
+</div>
+                    <div class="product-card bg-white rounded-2xl shadow-xl overflow-hidden transform hover:scale-105 transition-transform duration-300 cursor-pointer">
+    <img src="https://placehold.co/600x400/ff99aa/ffffff?text=Full+Color+A4" alt="Long and A4 full colored paper" class="w-full h-48 object-cover">
+    <div class="p-6">
+        <h3 class="text-2xl font-semibold text-pink-800">Full Color (Long & A4)</h3>
+        <p class="text-gray-600 mt-2">Colored prints for long and A4 documents with full color coverage (more than 30%).</p>
+        <div class="mt-4 flex flex-col items-stretch space-y-4">
+            <span class="text-xl font-bold text-gray-900 text-center">₱15.00</span>
+            
+            <label class="upload-btn w-full text-center py-2 rounded-full font-semibold shadow-lg transition-colors duration-300 bg-rose-200 text-rose-800 hover:bg-rose-300 cursor-pointer">
+                Upload Document
+                <input type="file" multiple accept=".pdf, .doc, .docx" class="hidden" data-id="16">
+            </label>
+            
+            <button class="add-to-cart-btn w-full bg-rose-600 text-white py-2 rounded-full font-semibold shadow-lg hover:bg-rose-700 transition-colors duration-300" data-id="16" data-name="Full Color (Long/A4)" data-price="15.00" data-image-src="https://placehold.co/600x400/ff99aa/ffffff?text=Full+Color+A4">Add to Cart</button>
+        </div>
+    </div>
+</div>
+
+                    <div class="product-card bg-white rounded-2xl shadow-xl overflow-hidden transform hover:scale-105 transition-transform duration-300 cursor-pointer">
+    <img src="https://placehold.co/600x400/ff99aa/ffffff?text=Full+Color+Short" alt="Short full colored paper" class="w-full h-48 object-cover">
+    <div class="p-6">
+        <h3 class="text-2xl font-semibold text-pink-800">Full Color (Short)</h3>
+        <p class="text-gray-600 mt-2">Colored prints for short documents with full color coverage (more than 30%).</p>
+        <div class="mt-4 flex flex-col items-stretch space-y-4">
+            <span class="text-xl font-bold text-gray-900 text-center">₱10.00</span>
+            
+            <label class="upload-btn w-full text-center py-2 rounded-full font-semibold shadow-lg transition-colors duration-300 bg-rose-200 text-rose-800 hover:bg-rose-300 cursor-pointer">
+                Upload Document
+                <input type="file" multiple accept=".pdf, .doc, .docx" class="hidden" data-id="18">
+            </label>
+            
+            <button class="add-to-cart-btn w-full bg-rose-600 text-white py-2 rounded-full font-semibold shadow-lg hover:bg-rose-700 transition-colors duration-300" data-id="18" data-name="Full Color (Short)" data-price="10.00" data-image-src="https://placehold.co/600x400/ff99aa/ffffff?text=Full+Color+Short">Add to Cart</button>
+        </div>
+    </div>
+</div>
+
+    <div id="cart-panel" class="fixed inset-y-0 right-0 z-50 bg-white w-96 max-w-full shadow-2xl transform translate-x-full transition-transform duration-300 ease-in-out">
+        <div class="flex justify-between items-center p-6 border-b border-gray-200">
+            <h3 class="text-2xl font-semibold text-gray-900">Your Cart</h3>
+            <button id="close-cart-btn" class="text-gray-400 hover:text-gray-500 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-rose-500">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+            </button>
+        </div>
+        <div id="cart-items" class="p-6 overflow-y-auto" style="height: calc(100vh - 12rem);">
+            <p id="empty-cart-message" class="text-gray-500 text-center mt-4">Your cart is empty.</p>
+        </div>
+        <div class="p-6 border-t border-gray-200">
+            <div class="flex justify-between items-center text-xl font-bold text-gray-900">
+                <span>Total:</span>
+                <span id="cart-total">₱0.00</span>
+            </div>
+            <button id="checkout-btn" class="w-full mt-4 py-3 bg-rose-600 text-white rounded-full font-bold text-lg hover:bg-rose-700 transition-colors duration-300">
+                Checkout
+            </button>
+        </div>
+    </div>
+
+    <div id="checkout-modal" class="hidden fixed inset-0 z-[60] flex items-center justify-center p-4 bg-gray-900 bg-opacity-50 backdrop-blur-sm transition-opacity duration-300 opacity-0">
+        <div class="bg-white rounded-3xl shadow-2xl p-8 w-full max-w-md transform scale-95 transition-transform duration-300">
+            <div class="flex justify-between items-center mb-6">
+                <h3 class="text-3xl font-extrabold text-pink-800">Checkout with GCash</h3>
+                <button id="close-modal-btn" class="text-gray-400 hover:text-gray-500 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-rose-500">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </button>
+            </div>
+            
+            <p class="text-gray-600 mb-4 text-center">Please send the exact amount to the GCash number below. Your order will be processed once payment is confirmed.</p>
+            
+            <div class="bg-gray-100 p-6 rounded-2xl mb-6">
+                <p class="text-sm font-semibold text-gray-500">Total Amount</p>
+                <p id="modal-total" class="text-4xl font-extrabold text-gray-900 mt-1">₱0.00</p>
+                
+                <p class="text-sm font-semibold text-gray-500 mt-4">GCash Number</p>
+                <div class="flex items-center justify-between mt-1">
+                    <span id="gcash-number" class="text-xl font-mono text-gray-800 font-bold">+639811417329</span>
+                    <button id="copy-gcash-btn" class="ml-4 p-2 rounded-full bg-rose-100 text-rose-600 hover:bg-rose-200 transition-colors duration-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                            <path d="M8 3a1 1 0 011-1h2a1 1 0 110 2H9a1 1 0 01-1-1z" />
+                            <path d="M6 3a2 2 0 00-2 2v11a2 2 0 002 2h8a2 2 0 002-2V5a2 2 0 00-2-2 3 3 0 01-3 3h3a2 2 0 002-2v-1a2 2 0 00-2-2h-1a3 3 0 01-3-3z" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            
+            <button id="confirm-payment-btn" class="w-full py-4 bg-rose-600 text-white rounded-full font-bold text-xl shadow-lg hover:bg-rose-700 transition-colors duration-300">
+                I have paid
+            </button>
+        </div>
+    </div>
+
+    <footer class="bg-white shadow-lg mt-8 py-6 px-4 text-center rounded-t-xl">
+        <p class="text-gray-600 text-sm">Contact Us: <span class="font-semibold text-gray-800">+639811417329</span></p>
+        <p class="text-gray-500 text-xs mt-2">&copy; 2023 Vie Prints & Crafts. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const cartButton = document.getElementById('cart-button');
+            const cartPanel = document.getElementById('cart-panel');
+            const closeCartBtn = document.getElementById('close-cart-btn');
+            const addToCartButtons = document.querySelectorAll('.add-to-cart-btn');
+            const cartItemsContainer = document.getElementById('cart-items');
+            const cartTotalElement = document.getElementById('cart-total');
+            const cartCountElement = document.getElementById('cart-count');
+            const emptyCartMessage = document.getElementById('empty-cart-message');
+            
+            let cart = [];
+
+            // Toggle cart panel visibility
+            const toggleCartPanel = () => {
+                cartPanel.classList.toggle('translate-x-full');
+            };
+
+            cartButton.addEventListener('click', toggleCartPanel);
+            closeCartBtn.addEventListener('click', toggleCartPanel);
+
+            // Function to update the cart display
+            const updateCartDisplay = () => {
+                cartItemsContainer.innerHTML = '';
+                let total = 0;
+
+                if (cart.length === 0) {
+                    emptyCartMessage.style.display = 'block';
+                } else {
+                    emptyCartMessage.style.display = 'none';
+                    cart.forEach(item => {
+                        const itemElement = document.createElement('div');
+                        itemElement.classList.add('flex', 'items-center', 'justify-between', 'py-3', 'border-b', 'border-gray-100');
+                        itemElement.innerHTML = `
+                            <div class="flex items-center space-x-4">
+                                <img src="${item.imageSrc}" alt="${item.name}" class="w-16 h-16 object-cover rounded-lg shadow-md">
+                                <div class="flex-grow">
+                                    <h4 class="font-medium">${item.name}</h4>
+                                    <span class="text-sm text-gray-500">Quantity: ${item.quantity}</span>
+                                </div>
+                            </div>
+                            <div class="flex items-center space-x-2">
+                                <span class="font-bold text-gray-900">₱${(item.price * item.quantity).toFixed(2)}</span>
+                                <button class="remove-item-btn p-1 rounded-full text-rose-600 hover:bg-rose-100 transition-colors" data-id="${item.id}">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                        <path fill-rule="evenodd" d="M9 2a1 1 0 00-.894.553L7.382 4H4a1 1 0 000 2v10a2 2 0 002 2h8a2 2 0 002-2V6a1 1 0 100-2h-3.382l-.724-1.447A1 1 0 0011 2H9zM7 8a1 1 0 012 0v6a1 1 0 11-2 0V8zm6 0a1 1 0 012 0v6a1 1 0 11-2 0V8z" clip-rule="evenodd" />
+                                    </svg>
+                                </button>
+                            </div>
+                        `;
+                        cartItemsContainer.appendChild(itemElement);
+                        total += item.price * item.quantity;
+                    });
+                }
+                
+                cartTotalElement.textContent = `₱${total.toFixed(2)}`;
+                cartCountElement.textContent = cart.reduce((sum, item) => sum + item.quantity, 0);
+            };
+
+            // Add item to cart when a button is clicked
+            addToCartButtons.forEach(button => {
+                button.addEventListener('click', (e) => {
+                    const id = e.target.dataset.id;
+                    const name = e.target.dataset.name;
+                    const price = parseFloat(e.target.dataset.price);
+                    const imageSrc = e.target.dataset.imageSrc;
+
+                    const existingItem = cart.find(item => item.id === id);
+                    if (existingItem) {
+                        existingItem.quantity++;
+                    } else {
+                        cart.push({ id, name, price, quantity: 1, imageSrc });
+                    }
+
+                    updateCartDisplay();
+                    
+                    // Show a message box confirming the item was added
+                    const messageBox = document.createElement('div');
+                    messageBox.className = "fixed bottom-5 left-1/2 -translate-x-1/2 bg-rose-500 text-white px-6 py-3 rounded-full shadow-lg transform transition-all duration-300 opacity-0 z-50";
+                    messageBox.textContent = `${name} added to cart!`;
+                    document.body.appendChild(messageBox);
+                    
+                    // Animate the message box in
+                    setTimeout(() => {
+                        messageBox.classList.add('opacity-100');
+                        messageBox.classList.remove('opacity-0');
+                    }, 10);
+                    
+                    // Animate the message box out and remove it
+                    setTimeout(() => {
+                        messageBox.classList.remove('opacity-100');
+                        messageBox.classList.add('opacity-0');
+                        messageBox.classList.add('translate-y-4');
+                    }, 2000);
+                    
+                    setTimeout(() => {
+                        messageBox.remove();
+                    }, 2500);
+                });
+            });
+
+            // Remove item from cart when its button is clicked
+            cartItemsContainer.addEventListener('click', (e) => {
+                if (e.target.closest('.remove-item-btn')) {
+                    const button = e.target.closest('.remove-item-btn');
+                    const idToRemove = button.dataset.id;
+                    
+                    // Filter the cart to create a new array without the item to be removed
+                    cart = cart.filter(item => item.id !== idToRemove);
+                    
+                    updateCartDisplay();
+                }
+            });
+
+            // Checkout Modal functionality
+            const checkoutButton = document.getElementById('checkout-btn');
+            const checkoutModal = document.getElementById('checkout-modal');
+            const closeCheckoutModalBtn = document.getElementById('close-modal-btn');
+            const modalTotalElement = document.getElementById('modal-total');
+            const gcashNumber = document.getElementById('gcash-number');
+            const copyGcashBtn = document.getElementById('copy-gcash-btn');
+            
+            // Show the checkout modal when the checkout button is clicked
+            checkoutButton.addEventListener('click', () => {
+                // First, check if the cart is empty
+                if (cart.length === 0) {
+                    // If cart is empty, show a message instead of the modal
+                    const messageBox = document.createElement('div');
+                    messageBox.className = "fixed bottom-5 left-1/2 -translate-x-1/2 bg-red-500 text-white px-6 py-3 rounded-full shadow-lg transform transition-all duration-300 opacity-0 z-50";
+                    messageBox.textContent = "Your cart is empty!";
+                    document.body.appendChild(messageBox);
+
+                    setTimeout(() => {
+                        messageBox.classList.add('opacity-100');
+                        messageBox.classList.remove('opacity-0');
+                    }, 10);
+
+                    setTimeout(() => {
+                        messageBox.classList.remove('opacity-100');
+                        messageBox.classList.add('opacity-0');
+                        messageBox.classList.add('translate-y-4');
+                    }, 2000);
+
+                    setTimeout(() => {
+                        messageBox.remove();
+                    }, 2500);
+                    return;
+                }
+
+                const currentTotal = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+                modalTotalElement.textContent = `₱${currentTotal.toFixed(2)}`;
+                checkoutModal.classList.remove('hidden', 'opacity-0');
+                checkoutModal.classList.add('opacity-100');
+            });
+
+            // Hide the checkout modal when the close button is clicked
+            closeCheckoutModalBtn.addEventListener('click', () => {
+                checkoutModal.classList.remove('opacity-100');
+                checkoutModal.classList.add('opacity-0');
+                setTimeout(() => {
+                    checkoutModal.classList.add('hidden');
+                }, 300); // Wait for the transition to finish
+            });
+
+            // Copy the GCash number to the clipboard
+            copyGcashBtn.addEventListener('click', () => {
+                const tempInput = document.createElement('input');
+                tempInput.value = gcashNumber.textContent.replace(/-/g, ''); // Remove hyphens for cleaner copy
+                document.body.appendChild(tempInput);
+                tempInput.select();
+                document.execCommand('copy');
+                document.body.removeChild(tempInput);
+
+                // Show a confirmation message
+                const messageBox = document.createElement('div');
+                messageBox.className = "fixed bottom-5 left-1/2 -translate-x-1/2 bg-rose-500 text-white px-6 py-3 rounded-full shadow-lg transform transition-all duration-300 opacity-0 z-50";
+                messageBox.textContent = "GCash number copied!";
+                document.body.appendChild(messageBox);
+                
+                setTimeout(() => {
+                    messageBox.classList.add('opacity-100');
+                    messageBox.classList.remove('opacity-0');
+                }, 10);
+                
+                setTimeout(() => {
+                    messageBox.classList.remove('opacity-100');
+                    messageBox.classList.add('opacity-0');
+                    messageBox.classList.add('translate-y-4');
+                }, 2000);
+                
+                setTimeout(() => {
+                    messageBox.remove();
+                }, 2500);
+            });
+            
+            // "I have paid" button functionality
+            const confirmPaymentBtn = document.getElementById('confirm-payment-btn');
+
+            confirmPaymentBtn.addEventListener('click', () => {
+                // Show a success message
+                const messageBox = document.createElement('div');
+                messageBox.className = "fixed bottom-5 left-1/2 -translate-x-1/2 bg-green-500 text-white px-6 py-3 rounded-full shadow-lg transform transition-all duration-300 opacity-0 z-50";
+                messageBox.textContent = "Payment Confirmed! Thank you for your purchase.";
+                document.body.appendChild(messageBox);
+                
+                setTimeout(() => {
+                    messageBox.classList.add('opacity-100');
+                    messageBox.classList.remove('opacity-0');
+                }, 10);
+                
+                setTimeout(() => {
+                    messageBox.classList.remove('opacity-100');
+                    messageBox.classList.add('opacity-0');
+                    messageBox.classList.add('translate-y-4');
+                }, 3000);
+                
+                setTimeout(() => {
+                    messageBox.remove();
+                }, 3500);
+
+                // Clear the cart
+                cart = [];
+                updateCartDisplay();
+                
+                // Hide the modals and cart panel
+                checkoutModal.classList.remove('opacity-100');
+                checkoutModal.classList.add('opacity-0');
+                setTimeout(() => {
+                    checkoutModal.classList.add('hidden');
+                }, 300);
+                cartPanel.classList.add('translate-x-full');
+            });
+
+            // Initial display update
+            updateCartDisplay();
+        });
+    </script>
+
+</body>
+</html>
